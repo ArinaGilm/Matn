@@ -65,19 +65,26 @@ else {
 function getRandomNumber(min, max) {
 	return Math.floor(Math.random() * (max + 1)) + min;
   }
-  
   const num = getRandomNumber(0, 100);
-  
   alert(`Загаданное число: ${num}`);
-  let number = prompt ('Введите число от 0 до 100', " ");
+  while (true) {
+  let number = prompt("Введите число от 1 до 100", " ");
   if (number > num) {
 	  alert ("Загаданное число меньше вашего");
   }
-  if (number < num) {
+  else if (number < num) {
 	  alert ("Загаданное число больше вашего");
   }
-  else {
-	  alert ("Поздравляю, вы угадали!");
+  else  {
+    break;
   }
+}
+alert ("Поздравляю, вы угадали!");
+
+
+
+
+
+
 
 
